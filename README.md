@@ -1,3 +1,7 @@
+# Introduction
+
+This application demonstrates SalesGPT example in Langchain Javascript framework [SalesGPT Example](https://js.langchain.com/docs/use_cases/autonomous_agents/sales_gpt)
+
 # Steps to test and code
 
 * Go to [OpenAI](https://platform.openai.com/playground) and OpenAI key and set it in the .env file
