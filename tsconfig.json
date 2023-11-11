@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "es2022",
+      "moduleResolution": "Node",
+      "downlevelIteration": true,
+      "importHelpers": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "paths": {
+        "tslib" : ["./node_modules/tslib/tslib.d.ts"]
+      },
+    },
+  }

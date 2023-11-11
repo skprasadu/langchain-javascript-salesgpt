@@ -1,0 +1,25 @@
+{
+  "name": "ts-langchain",
+  "version": "1.0.0",
+  "description": "TS Langchain",
+  "main": "index.js",
+  "esm": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run:salesgpt": "ts-node tests/sales_agent_test.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/prompt-sync": "^4.2.3",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "hnswlib-node": "^1.4.2",
+    "langchain": "^0.0.184",
+    "prompt-sync": "^4.2.0"
+  }
+}
