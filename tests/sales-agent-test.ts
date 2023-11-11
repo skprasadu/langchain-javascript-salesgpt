@@ -29,7 +29,8 @@ const userQuestions = [
     const prompt = promptSync();
 
     while(true) {
-        const question = await prompt('**********Next**********\n');
+        console.log('**********Please enter user response**********\n')
+        const question = await prompt('');
 
         await sales_agent.human_step(question);
         console.log("User Ask:", question);
