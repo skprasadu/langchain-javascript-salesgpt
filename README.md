@@ -1,6 +1,6 @@
 # Introduction
 
-This application demonstrates SalesGPT example in Langchain Javascript framework [SalesGPT Example](https://js.langchain.com/docs/use_cases/autonomous_agents/sales_gpt)
+This application demonstrates SalesGPT example in [Langchain Javascript framework](https://js.langchain.com/) [SalesGPT Example](https://js.langchain.com/docs/use_cases/autonomous_agents/sales_gpt)
 
 # Steps to test and code
 
