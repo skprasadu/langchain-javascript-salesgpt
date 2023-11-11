@@ -4,8 +4,8 @@ import { TextLoader } from "langchain/document_loaders/fs/text";
 import { CharacterTextSplitter } from "langchain/text_splitter";
 import { ChainTool } from "langchain/tools";
 import * as path from "path";
-import { embeddings, llm } from "../controllers/chains";
 import { BaseLanguageModel } from "langchain/base_language";
+import { embeddings, llm } from "../controllers/llm";
 
 //const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 

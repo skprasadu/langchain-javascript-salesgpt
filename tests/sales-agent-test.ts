@@ -1,4 +1,4 @@
-import { llm } from "../controllers/chains";
+import { llm } from "../controllers/llm";
 import { SalesGPT } from "../controllers/salesgpt";
 import promptSync from 'prompt-sync';
 

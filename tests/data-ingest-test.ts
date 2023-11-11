@@ -1,4 +1,4 @@
-import { llm } from "../controllers/chains";
+import { llm } from "../controllers/llm";
 import { setup_knowledge_base } from "../knowledge/data_ingest";
 
 export async function setup_knowledge_base_test(query: string) {

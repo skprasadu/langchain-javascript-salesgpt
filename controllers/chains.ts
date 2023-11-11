@@ -1,10 +1,7 @@
 import { PromptTemplate } from "langchain/prompts";
 import { LLMChain } from "langchain/chains";
 import { BaseLanguageModel } from "langchain/base_language";
-import { config } from "dotenv";
-import { ChatOpenAI } from "langchain/chat_models/openai";
-import { OpenAIEmbeddings } from "langchain/embeddings/openai";
-config();
+import { llm } from "./llm";
 
 // Chain to analyze which conversation stage should the conversation move into.
 export function loadStageAnalyzerChain(
@@ -98,23 +95,6 @@ export function loadSalesConversationChain(
 }
 
 const verbose = true;
-export const llm = new ChatOpenAI({
-    streaming: true,
-    //verbose: true,
-    temperature: 0,
-    azureOpenAIApiKey: process.env.AZURE_OPENAI_API_KEY, // In Node.js defaults to process.env.AZURE_OPENAI_API_KEY
-    azureOpenAIApiVersion: process.env.AZURE_OPENAI_API_VERSION, // In Node.js defaults to process.env.AZURE_OPENAI_API_VERSION
-    azureOpenAIApiDeploymentName: process.env.AZURE_OPENAI_API_DEPLOYMENTNAME, // In Node.js defaults to process.env.AZURE_OPENAI_API_DEPLOYMENT_NAME
-    azureOpenAIBasePath: process.env.AZURE_OPENAI_BASEPATH, // In Node.js defaults to process.env.AZURE_OPENAI_BASE_PATH
-  });
-
-export const embeddings = new OpenAIEmbeddings({
-    azureOpenAIApiKey: process.env.AZURE_OPENAI_API_KEY, // In Node.js defaults to process.env.AZURE_OPENAI_API_KEY
-    azureOpenAIApiVersion: process.env.AZURE_OPENAI_API_VERSION, // In Node.js defaults to process.env.AZURE_OPENAI_API_VERSION
-    azureOpenAIApiDeploymentName: process.env.AZURE_OPENAI_API_EMBEDDING_DEPLOYMENTNAME, // In Node.js defaults to process.env.AZURE_OPENAI_API_DEPLOYMENT_NAME
-    azureOpenAIBasePath: process.env.AZURE_OPENAI_BASEPATH, // In Node.js defaults to process.env.AZURE_OPENAI_BASE_PATH
-});
-  
 export const stage_analyzer_chain = loadStageAnalyzerChain(llm, verbose);
 
 export const sales_conversation_utterance_chain = loadSalesConversationChain(
